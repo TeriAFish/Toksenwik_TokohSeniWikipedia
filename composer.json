@@ -82,7 +82,8 @@
 		"wikimedia/wrappedstring": "4.0.1",
 		"wikimedia/xmp-reader": "0.9.2",
 		"zordius/lightncandy": "1.2.6",
-		"mediawiki/semantic-media-wiki": "dev-master"
+		"mediawiki/semantic-media-wiki": "dev-master",
+		"mediawiki/chameleon-skin": "~5.0"
 	},
 	"require-dev": {
 		"composer/spdx-licenses": "1.5.7",
