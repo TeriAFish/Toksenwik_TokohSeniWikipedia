@@ -54,11 +54,7 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$wgDBtype = "";
-$wgDBserver = "";
-$wgDBname = "";
-$wgDBuser = "";
-$wgDBpassword = "";
+
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -99,7 +95,7 @@ $wgLocaltimezone = "Europe/Berlin";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "";
+
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -121,14 +117,14 @@ $wgDiff3 = "";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, e.g. 'vector' or 'monobook':
-$wgDefaultSkin = "vector";
+$wgDefaultSkin = "chameleon";
 
 # Enabled skins.
 # The following skins were automatically enabled:
 wfLoadSkin( 'medik' );
 wfLoadSkin( 'MinervaNeue' );
 wfLoadSkin( 'MonoBook' );
-wfLoadSkin( 'Timeless' );
+wfLoadSkin( 'chameleon' );
 wfLoadSkin( 'Tweeki' );
 wfLoadSkin( 'Vector' );
 
@@ -148,7 +144,7 @@ wfLoadExtension( 'SpamBlacklist' );
 wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'SemanticMediaWiki' );
-
+wfLoadExtension( 'Bootstrap' );
 
 
 # End of automatically generated settings.
@@ -160,17 +156,15 @@ $wgShowExceptionDetails = true;
 $wgGroupPermissions['*']['createaccount'] = false;
 $wgGroupPermissions['*']['edit'] = false;
 
-// make 'sidebar-right' hideable with the #tweekihide parser function
-// (used on the main page)
-$wgTweekiSkinHideable[] = 'sidebar-right'; 
+$egChameleonLayoutFile= __DIR__ . '/skins/chameleon/layouts/index.xml';
 
-// hide the edit button as well as the subnavigation (containing the toolbox 
-// and personal links for editors) for anonymous users
-$wgTweekiSkinHideAnon['EDIT-EXT'] = true;  
-$wgTweekiSkinHideAnon['subnav'] = true;
+$egChameleonThemeFile = __DIR__ . '/themes/literi.scss';
 
-// hide the standard footer icons for everybody
-$wgTweekiSkinHideAnon['subnav'] = true;
+$egChameleonExternalStyleModules = [
+	__DIR__ . '/themes/literi_bootswatch.scss' => 'afterMain',
+];
 
-// use tooltip functionality
-$wgTweekiSkinUseTooltips = true;
+$localPathToSCSSFile1 = __DIR__ . '/themes/literi.scss';
+$localPathToSCSSFile2 = __DIR__ . '/themes/literi_bootswatch.scss';
+
+$egChameleonExternalStyleModules = [ $localPathToSCSSFile1, $localPathToSCSSFile2 ];
