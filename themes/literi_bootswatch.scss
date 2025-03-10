@@ -22,7 +22,112 @@
       border-width: 1px 0 0;
     }
   }
+  // Base navbar styling
+  min-height: 85px !important;
+  padding: 0 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+
+  // Logo/brand styling
+  .navbar-brand {
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    
+    img {
+      height: 80px !important;
+      width: auto !important;
+      transition: all 0.3s ease !important;
+    }
+  }
+
+  // Navigation container
+  .navbar-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    margin: 0 2rem !important;
+
+    // Individual nav items
+    .nav-item {
+      margin: 0 !important;
+      padding: 0.5rem 0 !important;
+    }
+
+    // Nav links
+    .nav-link {
+      font-size: 1.1rem !important;
+      padding: 0.8rem 1.2rem !important;
+      transition: all 0.2s ease !important;
+      white-space: nowrap !important;
+    }
+  }
+
+  // Search component
+  .search-input {
+    height: 48px !important;
+    min-width: 280px !important;
+    padding: 0rem 1.2rem !important;
+    margin: 0 1rem !important;
+    transition: all 0.2s ease !important;
+  }
+
+  // Responsive breakpoints
+  @media (max-width: 1200px) {
+    padding: 0 30px !important;
+    min-height: 100px !important;
+
+    .navbar-brand img {
+      height: 75px !important;
+    }
+
+    .search-input {
+      min-width: 240px !important;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 25px !important;
+    min-height: 90px !important;
+
+    .navbar-brand img {
+      height: 65px !important;
+    }
+
+    .nav-link {
+      padding: 0.6rem 1rem !important;
+    }
+
+    .search-input {
+      min-width: 200px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 20px !important;
+    min-height: 80px !important;
+
+    .navbar-brand img {
+      height: 55px !important;
+    }
+
+    .navbar-nav {
+      gap: 1rem !important;
+      margin: 0 1rem !important;
+    }
+
+    .search-input {
+      min-width: 180px !important;
+      height: 40px !important;
+    }
+  }
 }
+
+
+
 
 // Typography ==================================================================
 
@@ -261,7 +366,78 @@ table,
   vertical-align: bottom;
 }
 
-// Containers ==================================================================
+// footer Containers ==================================================================
+.custom-footer-container {
+  background-color: $red !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  width: 100vw !important; /* Full viewport width */
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  // General text color for all elements
+  * {
+    color: $white !important;
+  }
+
+  // Footer sections styling
+  .footer-info,
+  .footer-places,
+  .footer-icons {
+    color: $white !important;
+    margin: 10px !important;
+
+    // Style links within footer
+    a {
+      color: $white !important;
+      text-decoration: none !important;
+      transition: opacity 0.2s ease !important;
+
+      &:hover {
+        opacity: 0.8 !important;
+        text-decoration: underline !important;
+      }
+    }
+  }
+
+  // Style any paragraphs or text elements
+  p, span, div {
+    color: $white !important;
+  }
+
+  // Style any icons
+  i, svg {
+    fill: $white !important;
+    color: $white !important;
+  }
+}
+
+// Add this to ensure no unwanted margins from parent elements
+.grid[mode="fluid"] {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Target the "last modified" text (FooterInfo) */
+.footer-info {
+  color: $white !important; /* Adjust text color */
+  margin: 10px !important; /* Adjust spacing below the text */
+}
+
+/* Target the footer links (FooterPlaces) */
+.footer-places {
+  color: $white !important; /* Adjust text color */
+  margin: 10px !important; /* Adjust spacing around links */
+}
+
+/* Target the footer icons (FooterIcons) */
+.footer-icons {
+  color: $white !important; /* Adjust text color */
+  margin: 10px !important;
+}
 
 .list-group {
   font-size: $font-size-sm;

@@ -5,11 +5,11 @@
 // Color system
 //
 
-$white:    #fff !default;
+$white:    #f5f5f5 !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #ddd !default;
-$gray-400: #ced4da !default;
+$gray-400: #d9d9d9 !default;
 $gray-500: #adb5bd !default;
 $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
@@ -21,20 +21,20 @@ $blue:    #4582ec !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #d9534f !default;
+$red:     #763132 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #f0ad4e !default;
 $green:   #02b875 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$primary:       $blue !default;
+$primary:       $gray-800 !default;
 $secondary:     $gray-500 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
+$danger:        $orange !default;
+$light:         $gray-400 !default;
 $dark:          $gray-800 !default;
 
 $yiq-contrasted-threshold:  190 !default;
@@ -94,3 +94,5 @@ $badge-padding-x:                   1.2em !default;
 // Alerts
 
 $alert-border-width:                0 !default;
+
+// footer

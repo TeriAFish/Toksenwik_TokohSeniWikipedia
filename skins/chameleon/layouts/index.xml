@@ -3,6 +3,7 @@
 <structure xmlns="https://ProfessionalWiki.github.io/chameleon/schema/3.7/layout.rng">
 	<component type="NavbarHorizontal" showTogglerText="yes" >
 		<component type="Logo" position="head"/>
+		<component type="PersonalTools" position="right"/>
 		<component type="Menu" message="secondary-menu"/>
 		<component type="SearchBar" class="order-first order-cmln-0" position="right" buttons="go"/>
 	</component>
@@ -21,27 +22,18 @@
 		</row>
 	</grid>
 
-	<grid class="mb-2 mt-4" mode="fluid">
+	<grid mode="fluid">
 		<row>
 			<cell>
-				<component type="NavbarHorizontal" collapsible="no" class="small mb-2" >
-					<component type="Toolbox" flatten="no" class="dropup"/>
-					<component type="LangLinks" flatten="no" class="dropup"/>
-		            <component type="PersonalTools" position="right"/>
+				<component type="Container" collapsible="yes" class="custom-footer-container" >
+					<!-- <component type="Toolbox" flatten="no" class="dropup"/> -->
+					<!-- <component type="LangLinks" flatten="no" class="dropup"/> -->
 		            <component type="PageTools" class="flex-row" position="right" hideSelectedNameSpace="yes"/>
-		            <component type="NavMenu" flatten="navigation" />
+					<component type="FooterIcons" class="justify-content-end"/>
+					<component type="FooterInfo"/>
+					<component type="FooterPlaces"/>	
                     
 				</component>
-			</cell>
-		</row>
-
-		<row>
-			<cell>
-				<component type="FooterInfo"/>
-				<component type="FooterPlaces"/>
-			</cell>
-			<cell>
-				<component type="FooterIcons" class="justify-content-end"/>
 			</cell>
 		</row>
 	</grid>
