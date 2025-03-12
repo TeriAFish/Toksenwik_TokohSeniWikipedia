@@ -2,6 +2,7 @@
 
 <structure xmlns="https://ProfessionalWiki.github.io/chameleon/schema/3.7/layout.rng">
 	<component type="NavbarHorizontal" showTogglerText="yes" >
+		<modification type="Sticky"/>
 		<component type="Logo" position="head"/>
 		<component type="PersonalTools" position="right"/>
 		<component type="Menu" message="secondary-menu"/>
@@ -9,18 +10,19 @@
 	</component>
 
 	<grid class="flex-fill">
-		<row>
-			<cell>
-				<component type="SiteNotice"/>
-			</cell>
-		</row>
-
-		<row>
-			<cell>
-				<component type="MainContent"/>
-			</cell>
-		</row>
-	</grid>
+        <row>
+            <cell>
+                <component type="SiteNotice"/>
+            </cell>
+        </row>
+        
+        <row>
+            <!-- Main content area -->
+            <cell span="10">
+                <component type="MainContent"/>
+            </cell>
+        </row>
+    </grid>
 
 	<grid mode="fluid">
 		<row>

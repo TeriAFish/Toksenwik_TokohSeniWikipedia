@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Giromin Cangiaxo",
+			"Mvolz",
+			"S4b1nuz E.656",
+			"N. Longo"
+		]
+	},
+	"citoid-citation-widget-insert-button": "Inserìsci",
+	"citoid-citoiddialog-back": "Inderê",
+	"citoid-citoiddialog-credit": "Realizòu con $1",
+	"citoid-citoiddialog-lookup-button": "Gennera",
+	"citoid-citoiddialog-mode-auto": "Outomàtico",
+	"citoid-citoiddialog-mode-manual": "Manoâ",
+	"citoid-citoiddialog-mode-reuse": "Dêuvia tórna",
+	"citoid-citoiddialog-search": "Çerca",
+	"citoid-citoiddialog-search-label": "URL, DOI ò PMID",
+	"citoid-citoiddialog-search-placeholder": "prezénpio http://www.example.com",
+	"citoid-citoiddialog-search-progress": "Aproeuv'a sercâ, aspeta...",
+	"citoid-citoiddialog-title": "Azónzi 'na çitaçión",
+	"citoid-citoiddialog-title-replace": "Sostitoìsci çitaçión",
+	"citoid-citoiddialog-use-general-error-message": "No sémmo ariêscîi a creâ 'na çitaçión pe ti. Ti peu creâne unn-a a màn dêuviàndo a schêda \"{{int:citoid-citoiddialog-mode-manual}}\" chi de d'âto.",
+	"citoid-citoidtool-title": "Çìtta",
+	"citoid-citoidtool-title-othergroup": "Çitaçión",
+	"citoid-desc": "O fornìsce 'n pónto d'intrâ tra o servìçio citoid e MediaWiki",
+	"citoid-referencecontextitem-convert-button": "Convertî",
+	"citoid-referencecontextitem-convert-message": "Ti peu deuviâ o poméllo \"{{int:citoid-referencecontextitem-convert-button}}\" chi de sótta pe generâ 'na nòtta into formâto corètto.",
+	"citoid-unknown-error": "Gh'é stæto in erô sconosciûo ch'o l'à inpedîo a creaçión de 'na çitaçión. Pe piâxéi, provâ tórna ciù tàrdi.",
+	"citoid-wb-referenceview-tabs-automatic": "Outomàtico",
+	"citoid-wb-referenceview-tabs-search": "çèrca",
+	"citoid-wb-referenceview-tabs-search-label": "URL, DOI, ISBN ò QID:",
+	"citoid-wb-pendingdialog-error": "Inposcìbile generâ a nòtta a partî da sti dæti chi. Dêuvia a schêda manoâ ò prêuvighe tórna.",
+	"citoid-wb-pendingdialog-message": "Creaçión da nòtta... pe piâxéi, aténde...",
+	"citoid-wb-pendingdialog-title": "Creaçión da Çitaçión"
+}

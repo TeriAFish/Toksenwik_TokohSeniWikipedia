@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Skyllful"
+		]
+	},
+	"citoid-citoiddialog-lookup-button": "Create",
+	"citoid-citoiddialog-search-label": "URL or DOI",
+	"citoid-citoiddialog-search-placeholder": "e.g. http://www.example.ca"
+}

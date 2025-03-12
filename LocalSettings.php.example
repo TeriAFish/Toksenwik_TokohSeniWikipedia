@@ -37,8 +37,8 @@ $wgResourceBasePath = $wgScriptPath;
 ## The URL paths to the logo.  Make sure you change this from the default,
 ## or else you'll overwrite your logo when you upgrade!
 $wgLogos = [
-	'1x' => "$wgResourceBasePath/resources/assets/change-your-logo.svg",
-	'icon' => "$wgResourceBasePath/resources/assets/change-your-logo-icon.svg",
+	'1x' => "$wgResourceBasePath/resources/assets/toksenwiklogo.svg",
+	'icon' => "$wgResourceBasePath/resources/assets/toksenwiklogo.svg",
 ];
 
 ## UPO means: this is also a user preference option
@@ -54,7 +54,11 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-
+$wgDBtype = "mysql";
+$wgDBserver = "localhost";
+$wgDBname = "toksenwik";
+$wgDBuser = "fish";
+$wgDBpassword = "fish1780";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -72,7 +76,7 @@ $wgMemCachedServers = [];
 
 ## To enable image uploads, make sure the 'images' directory
 ## is writable, then set this to true:
-$wgEnableUploads = false;
+$wgEnableUploads = true;
 #$wgUseImageMagick = true;
 #$wgImageMagickConvertCommand = "/usr/bin/convert";
 
@@ -95,7 +99,7 @@ $wgLocaltimezone = "Europe/Berlin";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-
+$wgSecretKey = "f1abaa33b530864c856894265f22f4f8465203ddb8c36d9db35eb50be2d291af";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
@@ -145,6 +149,14 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'SemanticMediaWiki' );
 wfLoadExtension( 'Bootstrap' );
+wfLoadExtension( 'VisualEditor' );
+wfLoadExtension( 'PortableInfobox' );
+wfLoadExtension( 'Scribunto' );
+wfLoadExtension( 'TemplateStyles' );
+wfLoadExtension( 'TemplateData' );
+wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'Cite' );
+wfLoadExtension( 'Citoid' );
 
 
 # End of automatically generated settings.
@@ -156,6 +168,11 @@ $wgShowExceptionDetails = true;
 $wgGroupPermissions['*']['createaccount'] = false;
 $wgGroupPermissions['*']['edit'] = false;
 
+$wgFileExtensions = [ 'png', 'gif', 'jpg', 'jpeg', 'doc',
+	'xls', 'mpp', 'pdf', 'ppt', 'tiff', 'bmp', 'docx', 'xlsx',
+	'pptx', 'ps', 'odt', 'ods', 'odp', 'odg', 'svg'
+];
+
 $egChameleonLayoutFile= __DIR__ . '/skins/chameleon/layouts/index.xml';
 
 $egChameleonThemeFile = __DIR__ . '/themes/literi.scss';
@@ -164,7 +181,18 @@ $egChameleonExternalStyleModules = [
 	__DIR__ . '/themes/literi_bootswatch.scss' => 'afterMain',
 ];
 
-$localPathToSCSSFile1 = __DIR__ . '/themes/literi.scss';
-$localPathToSCSSFile2 = __DIR__ . '/themes/literi_bootswatch.scss';
 
-$egChameleonExternalStyleModules = [ $localPathToSCSSFile1, $localPathToSCSSFile2 ];
+$egChameleonExternalStyleVariables = [
+    'cmln-collapse-point' => '960px',
+];
+
+$wgAllowExternalImages= true;	
+
+// Optional: Set VisualEditor as the default editor for anonymous users
+// otherwise they will have to switch to VE
+$wgDefaultUserOptions['visualeditor-editor'] = "visualeditor";
+$wgGroupPermissions['user']['writeapi'] = true;
+
+
+$wgVisualEditorAllowLossySwitching=false;
+$wgScribuntoDefaultEngine = 'luastandalone';
