@@ -54,11 +54,11 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
-$wgDBtype = "mysql";
-$wgDBserver = "localhost";
-$wgDBname = "toksenwik";
-$wgDBuser = "fish";
-$wgDBpassword = "fish1780";
+$wgDBtype = "";
+$wgDBserver = "";
+$wgDBname = "";
+$wgDBuser = "";
+$wgDBpassword = "";
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -99,14 +99,14 @@ $wgLocaltimezone = "Europe/Berlin";
 ## be publicly accessible from the web.
 #$wgCacheDirectory = "$IP/cache";
 
-$wgSecretKey = "f1abaa33b530864c856894265f22f4f8465203ddb8c36d9db35eb50be2d291af";
+$wgSecretKey = "";
 
 # Changing this will log out all existing sessions.
 $wgAuthenticationTokenVersion = "1";
 
 # Site upgrade key. Must be set to a string (default provided) to turn on the
 # web installer while LocalSettings.php is in place
-$wgUpgradeKey = "7324b684769b88f5";
+$wgUpgradeKey = "";
 
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
